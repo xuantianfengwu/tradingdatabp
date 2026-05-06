@@ -62,21 +62,13 @@ data/
 
 ## 小程序截图
 
-### 首页
-
-<img src="docs/screenshots/home.jpg" width="300" />
-
-### 交易数据页面
-
-<img src="docs/screenshots/data.jpg" width="300" />
-
-### 交易策略页面
-
-<img src="docs/screenshots/strategy.jpg" width="300" />
-
-### 交易工具页面
-
-<img src="docs/screenshots/tools.jpg" width="300" />
+<figure style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+  <img src="docs/screenshots/home.jpg" width="200" title="首页" />
+  <img src="docs/screenshots/data.jpg" width="200" title="交易数据" />
+  <img src="docs/screenshots/strategy.jpg" width="200" title="交易策略" />
+  <img src="docs/screenshots/tools.jpg" width="200" title="交易工具" />
+</figure>
+<img src="docs/screenshots/小程序码12cm.jpg" width="200" title="首页" />
 
 ## 开发说明
 
