@@ -64,19 +64,19 @@ data/
 
 ### 首页
 
-![首页截图](docs/screenshots/home.png)
+![首页截图](docs/screenshots/home.jpg)
 
 ### 交易数据页面
 
-![交易数据截图](docs/screenshots/data.png)
+![交易数据截图](docs/screenshots/data.jpg)
 
 ### 交易策略页面
 
-![交易策略截图](docs/screenshots/strategy.png)
+![交易策略截图](docs/screenshots/strategy.jpg)
 
 ### 交易工具页面
 
-![交易工具截图](docs/screenshots/tools.png)
+<img src="docs/screenshots/tools.jpg" width="300" />
 
 ## 开发说明
 
