@@ -1,0 +1,13 @@
+{
+  "id": "pbc",
+  "name": "中国人民银行",
+  "type": "data_source",
+  "category": "macro",
+  "subCategory": "official",
+  "description": "中国人民银行官方数据平台，提供金融数据和货币政策信息",
+  "dataType": "货币供应量、利率、汇率、金融统计",
+  "url": "http://www.pbc.gov.cn/",
+  "tags": ["宏观经济", "央行", "金融数据", "政策"],
+  "content": "<h2>中国人民银行</h2><p>中国人民银行是中华人民共和国的中央银行，负责制定和执行货币政策。</p><h3>主要数据</h3><ul><li>货币供应量(M0/M1/M2)</li><li>存贷款利率</li><li>汇率数据</li><li>金融机构统计</li></ul><h3>特点</h3><p>✅ 央行权威<br>✅ 货币政策<br>✅ 金融数据<br>✅ 免费公开</p>",
+  "updateTime": "2024-01-15 13:30:00"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "metatrader",
+  "name": "MetaTrader",
+  "type": "交易平台",
+  "category": "外汇",
+  "description": "全球最流行的外汇交易平台",
+  "url": "https://www.metatrader4.com/",
+  "tags": ["外汇", "交易", "平台", "MT4"],
+  "content": "<h2>MetaTrader</h2><p>MetaTrader是全球最流行的外汇交易平台，支持策略回测和自动交易。</p><h3>主要功能</h3><ul><li><strong>交易执行：</strong>快速可靠的订单执行</li><li><strong>技术分析：</strong>丰富的技术指标和图表工具</li><li><strong>自动交易：</strong>支持EA自动交易策略</li><li><strong>策略测试：</strong>历史数据回测功能</li></ul><h3>特色优势</h3><p>MetaTrader 4和MetaTrader 5是全球外汇交易者的首选平台，功能强大，社区活跃。</p>",
+  "updateTime": "2024-01-15"
+}

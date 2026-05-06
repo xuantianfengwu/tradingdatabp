@@ -1,0 +1,13 @@
+{
+  "id": "coingecko",
+  "name": "CoinGecko",
+  "type": "data_source",
+  "category": "crypto",
+  "subCategory": "free",
+  "description": "加密货币价格、市值、交易量数据平台",
+  "dataType": "加密货币行情、市场数据、链上数据",
+  "url": "https://www.coingecko.com/",
+  "tags": ["加密货币", "数据", "免费", "API"],
+  "content": "<h2>CoinGecko</h2><p>CoinGecko是全球最大的加密货币数据平台之一，提供全面的加密货币市场数据。</p><h3>数据覆盖</h3><ul><li>价格和市值</li><li>交易量和流动性</li><li>链上数据分析</li><li>DeFi协议数据</li></ul><h3>特点</h3><p>✅ 数据全面<br>✅ 更新及时<br>✅ API免费<br>✅ 界面友好</p>",
+  "updateTime": "2024-01-15 12:45:00"
+}

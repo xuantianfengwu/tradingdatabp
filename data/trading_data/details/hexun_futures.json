@@ -1,0 +1,13 @@
+{
+  "id": "hexun_futures",
+  "name": "和讯期货",
+  "type": "data_source",
+  "category": "futures",
+  "subCategory": "free",
+  "description": "专业期货资讯和数据平台，提供实时行情和分析报告",
+  "dataType": "期货行情、分析报告、持仓数据",
+  "url": "http://futures.hexun.com/",
+  "tags": ["期货", "资讯", "分析", "免费"],
+  "content": "<h2>和讯期货</h2><p>和讯期货是专业的期货资讯平台，提供国内四大期货交易所的实时行情和深度分析。</p><h3>数据覆盖</h3><ul><li>商品期货：农产品、金属、能源</li><li>金融期货：股指期货、国债期货</li><li>持仓分析和龙虎榜</li><li>期货研究报告</li></ul><h3>特点</h3><p>✅ 资讯及时<br>✅ 分析专业<br>✅ 数据全面<br>✅ 免费使用</p>",
+  "updateTime": "2024-01-15 11:30:00"
+}

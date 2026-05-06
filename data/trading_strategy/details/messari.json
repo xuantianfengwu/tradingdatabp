@@ -1,0 +1,11 @@
+{
+  "id": "messari",
+  "name": "Messari",
+  "type": "research",
+  "category": "crypto",
+  "description": "加密资产研究报告",
+  "url": "https://messari.io/",
+  "tags": ["加密货币", "研究", "评级", "报告"],
+  "content": "<h2>Messari</h2><p>Messari是全球领先的加密资产研究平台，提供专业的代币分析和评级服务。</p><h3>主要功能</h3><ul><li>代币评级报告</li><li>链上数据分析</li><li>投资研究</li><li>市场洞察</li></ul><h3>特点</h3><p>✅ 研究专业<br>✅ 评级权威<br>✅ 数据全面<br>✅ 分析深入</p>",
+  "updateTime": "2024-01-15 20:45:00"
+}

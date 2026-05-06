@@ -1,0 +1,11 @@
+{
+  "id": "cftc",
+  "name": "CFTC报告",
+  "type": "news",
+  "category": "futures",
+  "description": "美国商品期货交易委员会周报，跟踪期货市场持仓变化",
+  "url": "https://www.cftc.gov/",
+  "tags": ["期货", "数据", "持仓", "监管"],
+  "content": "<h2>CFTC报告</h2><p>CFTC报告是美国商品期货交易委员会发布的持仓数据周报，是期货市场重要的参考指标。</p><h3>主要内容</h3><ul><li>期货持仓数据</li><li>投机持仓</li><li>商业持仓</li><li>持仓变化分析</li></ul><h3>特点</h3><p>✅ 数据权威<br>✅ 每周更新<br>✅ 参考价值高<br>✅ 免费获取</p>",
+  "updateTime": "2024-01-15 23:15:00"
+}

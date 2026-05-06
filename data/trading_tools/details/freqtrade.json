@@ -1,0 +1,11 @@
+{
+  "id": "freqtrade",
+  "name": "Freqtrade",
+  "type": "backtest",
+  "category": "crypto",
+  "description": "开源加密货币量化交易机器人，支持策略回测和实盘",
+  "url": "https://www.freqtrade.io/",
+  "tags": ["加密货币", "量化", "回测", "实盘"],
+  "content": "<h2>Freqtrade</h2><p>Freqtrade是一个开源的加密货币量化交易机器人，支持策略回测和实盘交易。</p><h3>主要功能</h3><ul><li>策略回测</li><li>实盘交易</li><li>参数优化</li><li>多交易所支持</li></ul><h3>特点</h3><p>✅ 开源免费<br>✅ 功能强大<br>✅ 社区活跃<br>✅ 文档完善</p>",
+  "updateTime": "2024-01-16 01:00:00"
+}

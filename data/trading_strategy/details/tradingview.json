@@ -1,0 +1,11 @@
+{
+  "id": "tradingview",
+  "name": "TradingView社区",
+  "type": "community",
+  "category": "crypto",
+  "description": "专业图表分析和策略回测平台",
+  "url": "https://www.tradingview.com/",
+  "tags": ["图表", "分析", "回测", "社区"],
+  "content": "<h2>TradingView社区</h2><p>TradingView是全球最受欢迎的图表分析平台，支持加密货币分析和策略分享。</p><h3>主要功能</h3><ul><li>专业图表分析</li><li>Pine Script策略</li><li>社区策略分享</li><li>实时行情</li></ul><h3>特点</h3><p>✅ 图表强大<br>✅ 社区活跃<br>✅ 多市场<br>✅ 免费使用</p>",
+  "updateTime": "2024-01-15 19:30:00"
+}

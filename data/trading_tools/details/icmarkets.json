@@ -1,0 +1,11 @@
+{
+  "id": "icmarkets",
+  "name": "IC Markets",
+  "type": "经纪商",
+  "category": "外汇",
+  "description": "全球领先的外汇经纪商",
+  "url": "https://www.icmarkets.com/",
+  "tags": ["外汇", "经纪商", "交易", "ECN"],
+  "content": "<h2>IC Markets</h2><p>IC Markets是全球领先的外汇经纪商，提供低延迟交易和专业服务。</p><h3>主要特点</h3><ul><li><strong>ECN执行：</strong>真正的ECN交易环境</li><li><strong>低延迟：</strong>毫秒级订单执行</li><li><strong>低点差：</strong>极具竞争力的点差</li><li><strong>多账户：</strong>支持多种账户类型</li></ul><h3>特色优势</h3><p>IC Markets以其卓越的交易执行和优质的客户服务，成为全球交易者的首选经纪商。</p>",
+  "updateTime": "2024-01-15"
+}

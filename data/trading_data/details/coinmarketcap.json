@@ -1,0 +1,13 @@
+{
+  "id": "coinmarketcap",
+  "name": "CoinMarketCap",
+  "type": "data_source",
+  "category": "crypto",
+  "subCategory": "free",
+  "description": "加密货币市场排名和数据平台",
+  "dataType": "加密货币排名、价格、市值、流通量",
+  "url": "https://coinmarketcap.com/",
+  "tags": ["加密货币", "排名", "数据", "权威"],
+  "content": "<h2>CoinMarketCap</h2><p>CoinMarketCap是最权威的加密货币市场数据平台，提供加密货币排名和市场分析。</p><h3>数据覆盖</h3><ul><li>加密货币排名</li><li>实时价格和涨跌幅</li><li>市值和流通量</li><li>市场情绪指数</li></ul><h3>特点</h3><p>✅ 权威排名<br>✅ 数据准确<br>✅ 界面简洁<br>✅ 更新及时</p>",
+  "updateTime": "2024-01-15 13:00:00"
+}

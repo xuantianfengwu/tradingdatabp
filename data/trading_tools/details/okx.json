@@ -1,0 +1,11 @@
+{
+  "id": "okx",
+  "name": "OKX",
+  "type": "trading",
+  "category": "crypto",
+  "description": "全球知名加密货币交易所，提供现货、合约、DeFi等服务",
+  "url": "https://www.okx.com/",
+  "tags": ["加密货币", "交易所", "合约", "DeFi"],
+  "content": "<h2>OKX</h2><p>OKX是全球知名的加密货币交易所，提供现货、合约、DeFi等多元化服务。</p><h3>主要功能</h3><ul><li>现货交易</li><li>合约交易</li><li>DeFi服务</li><li>NFT市场</li></ul><h3>特点</h3><p>✅ 产品线丰富<br>✅ 交易体验好<br>✅ 安全性高<br>✅ 全球覆盖</p>",
+  "updateTime": "2024-01-16 01:30:00"
+}

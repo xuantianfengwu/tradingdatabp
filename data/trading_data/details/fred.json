@@ -1,0 +1,13 @@
+{
+  "id": "fred",
+  "name": "FRED",
+  "type": "data_source",
+  "category": "macro",
+  "subCategory": "free",
+  "description": "美联储经济数据库，提供全球宏观经济数据",
+  "dataType": "全球经济指标、美国经济数据、国际数据",
+  "url": "https://fred.stlouisfed.org/",
+  "tags": ["宏观经济", "全球", "美联储", "免费"],
+  "content": "<h2>FRED</h2><p>FRED是美联储圣路易斯分行维护的经济数据库，提供海量的全球宏观经济数据。</p><h3>数据覆盖</h3><ul><li>美国经济数据</li><li>全球各国经济指标</li><li>金融市场数据</li><li>行业统计数据</li></ul><h3>特点</h3><p>✅ 数据海量<br>✅ 全球覆盖<br>✅ 免费使用<br>✅ API支持</p>",
+  "updateTime": "2024-01-15 13:45:00"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "joinquant",
+  "name": "聚宽量化",
+  "type": "backtest",
+  "category": "stock",
+  "description": "国内量化平台，提供A股、港股、美股数据，支持策略回测和实盘交易",
+  "url": "https://www.joinquant.com/",
+  "tags": ["量化", "回测", "实盘", "A股"],
+  "content": "<h2>聚宽量化</h2><p>聚宽量化是国内领先的量化平台，提供全面的金融数据和策略回测服务。</p><h3>主要功能</h3><ul><li>策略回测</li><li>实盘交易</li><li>多市场数据</li><li>API接口</li></ul><h3>特点</h3><p>✅ 数据全面<br>✅ 回测强大<br>✅ 实盘支持<br>✅ 社区活跃</p>",
+  "updateTime": "2024-01-16 02:00:00"
+}

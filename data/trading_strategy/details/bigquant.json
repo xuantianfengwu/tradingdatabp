@@ -1,0 +1,10 @@
+{
+  "id": "bigquant",
+  "name": "BigQuant量化",
+  "type": "official_account",
+  "category": "stock",
+  "description": "AI量化策略研究和分享",
+  "tags": ["AI", "量化", "策略", "公众号"],
+  "content": "<h2>BigQuant量化</h2><p>BigQuant量化专注于AI量化策略的研究和分享，探索人工智能在量化投资中的应用。</p><h3>内容特色</h3><ul><li>AI量化策略</li><li>机器学习应用</li><li>因子挖掘研究</li><li>策略优化方法</li></ul><h3>适合人群</h3><p>适合对AI量化感兴趣，希望了解前沿量化技术的投资者。</p>",
+  "updateTime": "2024-01-15 15:15:00"
+}

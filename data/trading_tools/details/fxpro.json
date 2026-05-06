@@ -1,0 +1,11 @@
+{
+  "id": "fxpro",
+  "name": "FXPro",
+  "type": "经纪商",
+  "category": "外汇",
+  "description": "专业的外汇交易平台",
+  "url": "https://www.fxpro.com/",
+  "tags": ["外汇", "经纪商", "交易", "ECN"],
+  "content": "<h2>FXPro</h2><p>FXPro是专业的外汇交易平台，提供ECN执行和透明定价。</p><h3>主要特点</h3><ul><li><strong>ECN执行：</strong>深度流动性池</li><li><strong>透明定价：</strong>无隐藏费用</li><li><strong>多平台支持：</strong>支持MT4/MT5等平台</li><li><strong>资金安全：</strong>客户资金隔离存放</li></ul><h3>特色优势</h3><p>FXPro以其专业的服务和透明的交易环境，成为专业交易者的首选。</p>",
+  "updateTime": "2024-01-15"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "vnpy",
+  "name": "VN.PY",
+  "type": "community",
+  "category": "futures",
+  "description": "国内知名量化交易框架，支持期货实盘",
+  "url": "https://www.vnpy.com/",
+  "tags": ["期货", "量化", "框架", "实盘"],
+  "content": "<h2>VN.PY</h2><p>VN.PY是国内知名的开源量化交易框架，专注于期货市场的量化交易。</p><h3>主要功能</h3><ul><li>期货实盘交易</li><li>策略回测框架</li><li>多种接口支持</li><li>风控管理模块</li></ul><h3>特点</h3><p>✅ 开源免费<br>✅ 实盘稳定<br>✅ 社区活跃<br>✅ 文档完善</p>",
+  "updateTime": "2024-01-15 17:00:00"
+}

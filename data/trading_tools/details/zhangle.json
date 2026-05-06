@@ -1,0 +1,11 @@
+{
+  "id": "zhangle",
+  "name": "涨乐财富通",
+  "type": "trading",
+  "category": "stock",
+  "description": "华泰证券官方交易软件，支持A股、基金等多种交易",
+  "url": "https://www.htsc.com.cn/",
+  "tags": ["券商", "交易", "股票", "基金"],
+  "content": "<h2>涨乐财富通</h2><p>涨乐财富通是华泰证券官方交易软件，提供专业的证券交易服务。</p><h3>主要功能</h3><ul><li>股票交易</li><li>基金投资</li><li>理财服务</li><li>智能投顾</li></ul><h3>特点</h3><p>✅ 交易稳定<br>✅ 功能全面<br>✅ 服务专业<br>✅ 安全可靠</p>",
+  "updateTime": "2024-01-15 22:15:00"
+}

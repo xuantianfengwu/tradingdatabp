@@ -1,0 +1,11 @@
+{
+  "id": "investing_com",
+  "name": "Investing.com",
+  "type": "数据平台",
+  "category": "外汇",
+  "description": "全球领先的金融数据平台",
+  "url": "https://www.investing.com/",
+  "tags": ["外汇", "实时行情", "全球市场", "财经新闻"],
+  "content": "<h2>Investing.com</h2><p>Investing.com是全球领先的金融数据和财经新闻平台，提供实时外汇汇率、股票行情、期货数据、加密货币价格等。</p><h3>主要功能</h3><ul><li><strong>实时行情：</strong>提供全球主要货币对的实时汇率</li><li><strong>财经新闻：</strong>覆盖全球财经新闻和市场分析</li><li><strong>技术分析：</strong>提供专业的图表和技术指标</li><li><strong>经济日历：</strong>重要经济数据发布时间表</li></ul><h3>特色优势</h3><p>Investing.com拥有庞大的用户群体，数据更新及时，界面友好，支持多语言版本。</p>",
+  "updateTime": "2024-01-15"
+}

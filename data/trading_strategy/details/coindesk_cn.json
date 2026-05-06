@@ -1,0 +1,10 @@
+{
+  "id": "coindesk_cn",
+  "name": "CoinDesk中文",
+  "type": "official_account",
+  "category": "crypto",
+  "description": "全球加密货币资讯",
+  "tags": ["加密货币", "资讯", "全球", "公众号"],
+  "content": "<h2>CoinDesk中文</h2><p>CoinDesk中文是全球知名加密货币媒体CoinDesk的中文版本，提供全球加密货币资讯。</p><h3>内容特色</h3><ul><li>全球加密货币新闻</li><li>行业动态</li><li>政策解读</li><li>深度报道</li></ul><h3>适合人群</h3><p>适合关注全球加密货币市场的投资者。</p>",
+  "updateTime": "2024-01-15 20:30:00"
+}

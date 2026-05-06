@@ -1,0 +1,11 @@
+{
+  "id": "xe",
+  "name": "XE.com",
+  "type": "汇率查询",
+  "category": "外汇",
+  "description": "全球知名的外汇汇率查询网站",
+  "url": "https://www.xe.com/",
+  "tags": ["外汇", "汇率", "换算", "免费"],
+  "content": "<h2>XE.com</h2><p>XE.com是全球知名的外汇汇率查询和货币兑换网站，提供180+货币的实时汇率。</p><h3>主要功能</h3><ul><li><strong>汇率查询：</strong>支持180+货币的实时汇率查询</li><li><strong>货币换算：</strong>方便的货币换算工具</li><li><strong>历史数据：</strong>提供汇率历史走势图</li><li><strong>移动应用：</strong>支持iOS和Android平台</li></ul><h3>特色优势</h3><p>XE.com以其准确的汇率数据和简洁的界面设计受到用户喜爱，是全球最受欢迎的汇率查询网站之一。</p>",
+  "updateTime": "2024-01-15"
+}

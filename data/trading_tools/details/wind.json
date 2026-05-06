@@ -1,0 +1,11 @@
+{
+  "id": "wind",
+  "name": "Wind资讯",
+  "type": "news",
+  "category": "stock",
+  "description": "专业金融数据和资讯平台，机构级财经信息服务",
+  "url": "https://www.wind.com.cn/",
+  "tags": ["专业", "机构", "数据", "资讯"],
+  "content": "<h2>Wind资讯</h2><p>Wind资讯是中国领先的金融数据和分析工具提供商，为机构投资者提供专业服务。</p><h3>主要功能</h3><ul><li>实时行情和历史数据</li><li>财务分析工具</li><li>研究报告库</li><li>量化分析平台</li></ul><h3>特点</h3><p>✅ 机构级服务<br>✅ 数据全面<br>✅ 分析强大<br>✅ 专业支持</p>",
+  "updateTime": "2024-01-16 02:30:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "yahoo_finance",
+  "name": "Yahoo Finance",
+  "type": "data_source",
+  "category": "stock",
+  "subCategory": "free",
+  "description": "全球知名金融数据平台，提供全球主要市场股票数据下载",
+  "dataType": "全球股票数据、ETF、外汇、商品",
+  "url": "https://finance.yahoo.com/",
+  "tags": ["全球", "免费", "多市场", "英文"],
+  "content": "<h2>Yahoo Finance</h2><p>Yahoo Finance是全球最知名的金融数据平台之一，提供全球主要市场的实时行情和历史数据。</p><h3>数据覆盖</h3><ul><li>全球股票：NYSE、NASDAQ、LSE等</li><li>ETF和指数基金</li><li>外汇汇率</li><li>商品期货</li></ul><h3>特点</h3><p>✅ 全球覆盖<br>✅ 历史数据丰富<br>✅ 免费下载<br>✅ API支持</p>",
+  "updateTime": "2024-01-15 11:15:00"
+}

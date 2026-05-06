@@ -1,0 +1,11 @@
+{
+  "id": "haitong",
+  "name": "海通证券",
+  "type": "research",
+  "category": "stock",
+  "description": "行业研究报告",
+  "url": "https://www.htsec.com/",
+  "tags": ["券商", "行业研究", "报告", "分析"],
+  "content": "<h2>海通证券研究</h2><p>海通证券研究部在行业研究方面具有深厚积累，提供专业的行业分析报告。</p><h3>研究领域</h3><ul><li>行业深度研究</li><li>公司价值分析</li><li>投资评级建议</li><li>行业比较研究</li></ul><h3>特点</h3><p>✅ 行业覆盖广<br>✅ 分析深入<br>✅ 数据详实<br>✅ 评级准确</p>",
+  "updateTime": "2024-01-15 16:30:00"
+}

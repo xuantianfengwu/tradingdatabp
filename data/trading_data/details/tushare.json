@@ -1,0 +1,13 @@
+{
+  "id": "tushare",
+  "name": "Tushare",
+  "type": "data_source",
+  "category": "stock",
+  "subCategory": "free",
+  "description": "免费专业金融数据接口，提供A股、港股、美股等多市场数据",
+  "dataType": "股票K线、财务指标、资金流向、股东结构",
+  "url": "https://tushare.pro/",
+  "tags": ["Python", "免费", "多市场", "API"],
+  "content": "<h2>Tushare 介绍</h2><p>Tushare是一个免费、开源的Python财经数据接口包，为量化交易者提供便捷的数据获取方式。</p><h3>主要功能</h3><ul><li>A股、港股、美股日/分钟K线数据</li><li>财务指标数据（市盈率、市净率等）</li><li>资金流向数据</li><li>股东结构和持股数据</li><li>龙虎榜数据</li></ul><h3>使用示例</h3><pre><code>import tushare as ts\ndf = ts.get_k_data('000001', start='2024-01-01')\nprint(df.head())</code></pre><h3>特点</h3><p>✅ 免费使用<br>✅ 数据全面<br>✅ API文档完善<br>✅ 社区活跃</p>",
+  "updateTime": "2024-01-15 10:30:00"
+}

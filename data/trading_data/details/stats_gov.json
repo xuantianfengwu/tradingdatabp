@@ -1,0 +1,13 @@
+{
+  "id": "stats_gov",
+  "name": "国家统计局",
+  "type": "data_source",
+  "category": "macro",
+  "subCategory": "official",
+  "description": "国内权威宏观经济数据发布平台",
+  "dataType": "GDP、CPI、PPI、就业数据、人口统计",
+  "url": "https://data.stats.gov.cn/",
+  "tags": ["宏观经济", "官方", "权威", "免费"],
+  "content": "<h2>国家统计局</h2><p>国家统计局是国务院直属机构，负责发布全国性的宏观经济数据。</p><h3>主要数据</h3><ul><li>GDP数据</li><li>CPI和PPI</li><li>就业和人口数据</li><li>工业生产数据</li></ul><h3>特点</h3><p>✅ 官方权威<br>✅ 数据准确<br>✅ 免费公开<br>✅ 时效性强</p>",
+  "updateTime": "2024-01-15 13:15:00"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "quantconnect",
+  "name": "QuantConnect",
+  "type": "backtest",
+  "category": "futures",
+  "description": "云端量化平台，支持期货策略回测和实盘交易",
+  "url": "https://www.quantconnect.com/",
+  "tags": ["回测", "云端", "期货", "实盘"],
+  "content": "<h2>QuantConnect</h2><p>QuantConnect是一个云端量化平台，支持期货策略回测和实盘交易。</p><h3>主要功能</h3><ul><li>云端回测</li><li>多市场支持</li><li>实盘交易</li><li>策略共享</li></ul><h3>特点</h3><p>✅ 云端运行<br>✅ 数据丰富<br>✅ 支持实盘<br>✅ 社区活跃</p>",
+  "updateTime": "2024-01-16 00:00:00"
+}

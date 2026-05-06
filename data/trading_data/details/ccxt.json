@@ -1,0 +1,13 @@
+{
+  "id": "ccxt",
+  "name": "CCXT",
+  "type": "data_source",
+  "category": "crypto",
+  "subCategory": "api",
+  "description": "统一加密货币交易所API，支持100+交易所的接入",
+  "dataType": "加密货币行情、交易API、历史数据",
+  "url": "https://github.com/ccxt/ccxt",
+  "tags": ["加密货币", "API", "多交易所", "开源"],
+  "content": "<h2>CCXT</h2><p>CCXT是一个开源的加密货币交易所API库，支持100+主流交易所的统一接口。</p><h3>支持交易所</h3><ul><li>Binance、OKX、Huobi</li><li>Coinbase Pro、Kraken</li><li>100+其他交易所</li></ul><h3>主要功能</h3><ul><li>实时行情获取</li><li>历史数据下载</li><li>交易下单接口</li><li>账户余额查询</li></ul><h3>特点</h3><p>✅ 多语言支持<br>✅ 统一接口<br>✅ 开源免费<br>✅ 社区活跃</p>",
+  "updateTime": "2024-01-15 12:30:00"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "binance",
+  "name": "Binance",
+  "type": "trading",
+  "category": "crypto",
+  "description": "全球最大加密货币交易所，支持数百种加密货币交易",
+  "url": "https://www.binance.com/",
+  "tags": ["加密货币", "交易所", "交易", "全球"],
+  "content": "<h2>Binance</h2><p>Binance是全球最大的加密货币交易所，支持数百种加密货币的现货和衍生品交易。</p><h3>主要功能</h3><ul><li>现货交易</li><li>合约交易</li><li>DeFi服务</li><li>质押挖矿</li></ul><h3>特点</h3><p>✅ 交易量大<br>✅ 币种丰富<br>✅ 安全性高<br>✅ 功能全面</p>",
+  "updateTime": "2024-01-16 01:15:00"
+}

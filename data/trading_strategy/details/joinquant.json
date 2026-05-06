@@ -1,0 +1,11 @@
+{
+  "id": "joinquant",
+  "name": "聚宽社区",
+  "type": "community",
+  "category": "stock",
+  "description": "国内最大的量化社区，分享策略思路和回测结果",
+  "url": "https://www.joinquant.com/community",
+  "tags": ["量化", "社区", "回测", "A股"],
+  "content": "<h2>聚宽社区</h2><p>聚宽社区是国内最大的量化投资社区，拥有大量量化策略分享和回测结果。</p><h3>主要功能</h3><ul><li>策略分享平台</li><li>在线回测工具</li><li>量化论坛讨论</li><li>策略实盘对接</li></ul><h3>特点</h3><p>✅ 社区活跃<br>✅ 策略丰富<br>✅ 回测工具强大<br>✅ 实盘支持</p>",
+  "updateTime": "2024-01-15 14:00:00"
+}

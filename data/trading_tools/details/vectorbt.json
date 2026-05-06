@@ -1,0 +1,11 @@
+{
+  "id": "vectorbt",
+  "name": "VectorBT",
+  "type": "backtest",
+  "category": "futures",
+  "description": "高性能Python回测库，支持期货策略回测和优化",
+  "url": "https://github.com/polakowo/vectorbt",
+  "tags": ["回测", "Python", "高性能", "期货"],
+  "content": "<h2>VectorBT</h2><p>VectorBT是一个高性能的Python回测库，基于NumPy和Pandas构建，支持快速策略回测。</p><h3>主要功能</h3><ul><li>高性能回测</li><li>参数优化</li><li>可视化分析</li><li>多策略支持</li></ul><h3>特点</h3><p>✅ 速度快<br>✅ 功能强<br>✅ 灵活<br>✅ 开源</p>",
+  "updateTime": "2024-01-16 00:15:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "akshare",
+  "name": "AKShare",
+  "type": "data_source",
+  "category": "stock",
+  "subCategory": "free",
+  "description": "全品种Python数据源，支持股票、期货、基金等多种标的的数据获取",
+  "dataType": "全品种数据、实时行情、历史数据",
+  "url": "https://www.akshare.xyz/",
+  "tags": ["Python", "免费", "全品种", "实时"],
+  "content": "<h2>AKShare 介绍</h2><p>AKShare是基于Python的财经数据接口库，提供丰富的财经数据接口。</p><h3>数据覆盖</h3><ul><li>股票：A股、港股、美股</li><li>期货：国内四大期货交易所</li><li>基金：公募基金、私募基金</li><li>债券：国债、企业债</li><li>外汇、加密货币</li></ul><h3>使用示例</h3><pre><code>import akshare as ak\nstock_zh_a_spot_df = ak.stock_zh_a_spot()\nprint(stock_zh_a_spot_df)</code></pre><h3>特点</h3><p>✅ 全品种覆盖<br>✅ 实时数据<br>✅ 完全免费<br>✅ 持续更新</p>",
+  "updateTime": "2024-01-15 11:00:00"
+}
