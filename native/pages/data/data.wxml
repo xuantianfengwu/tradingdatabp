@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="header-section">
+    <text class="header-title">交易数据</text>
+    <text class="header-subtitle">投资标的数据获取渠道</text>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x>
+    <view class="category-tabs">
+      <view 
+        wx:for="{{categories}}" 
+        wx:key="id"
+        class="category-item {{currentIndex === index ? 'active' : ''}}"
+        bindtap="switchTab"
+        data-index="{{index}}"
+      >
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <swiper 
+    class="content-swiper"
+    current="{{currentIndex}}"
+    bindchange="onSwiperChange"
+    duration="300"
+  >
+    <swiper-item wx:for="{{categories}}" wx:key="id">
+      <scroll-view class="tab-content" scroll-y>
+        <view class="section-header">
+          <text class="section-title">{{item.name}}</text>
+          <text class="section-desc">{{item.description}}</text>
+          <text class="view-all-btn" bindtap="viewAll" data-category="{{item.id}}">查看全部 ›</text>
+        </view>
+
+        <view class="source-list">
+          <view 
+            wx:for="{{item.sources}}" 
+            wx:key="id"
+            class="source-card"
+          >
+            <view class="source-header">
+              <view class="title-wrapper">
+                <text class="source-name">{{item.name}}</text>
+                <button class="link-btn" bindtap="openLink" data-url="{{item.url}}">官网</button>
+              </view>
+              <text class="detail-btn" bindtap="goToDetail" data-source="{{item}}">查看详情 ›</text>
+            </view>
+            <text class="source-desc">{{item.description}}</text>
+            <view class="source-tags">
+              <text 
+                wx:for="{{item.tags}}" 
+                wx:key="*this"
+                class="tag"
+              >{{item}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

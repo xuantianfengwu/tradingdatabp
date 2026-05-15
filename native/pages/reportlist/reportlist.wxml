@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header-section">
+    <text class="header-title">券商研报</text>
+    <text class="header-subtitle">汇集主流券商研究报告</text>
+  </view>
+
+  <view class="report-list">
+    <block wx:for="{{reports}}" wx:key="id">
+      <view class="report-card">
+        <view class="report-title">{{item.title}}</view>
+        <view class="report-meta">
+          <text class="report-author">{{item.author}}</text>
+          <text class="report-date">{{item.date}}</text>
+        </view>
+        <view class="report-summary">{{item.summary}}</view>
+        <view class="report-actions">
+          <text class="action-btn">查看详情</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

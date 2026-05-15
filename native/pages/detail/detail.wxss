@@ -1,0 +1,152 @@
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.detail-header {
+  background-color: #fff;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.link-btn {
+  background-color: #1E88E5;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+  border: none;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.tag {
+  background-color: #E3F2FD;
+  color: #1E88E5;
+  font-size: 22rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 6rpx;
+}
+
+.detail-content {
+  background-color: #fff;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  line-height: 1.8;
+}
+
+.detail-content h2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 20rpx 0;
+}
+
+.detail-content h3 {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #555;
+  margin: 16rpx 0;
+}
+
+.detail-content p {
+  font-size: 26rpx;
+  color: #666;
+  margin: 12rpx 0;
+}
+
+.detail-content ul {
+  padding-left: 20rpx;
+}
+
+.detail-content li {
+  font-size: 26rpx;
+  color: #666;
+  margin: 8rpx 0;
+}
+
+.detail-content pre {
+  background-color: #f5f5f5;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  overflow-x: auto;
+}
+
+.detail-content code {
+  font-family: monospace;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.related-articles {
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.related-articles h3 {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-title {
+  font-size: 26rpx;
+  color: #1E88E5;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.article-arrow {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-left: 20rpx;
+}
+
+.update-info {
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  border-radius: 16rpx;
+}
+
+.update-text {
+  font-size: 24rpx;
+  color: #999;
+}

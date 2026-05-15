@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="list-header">
+    <text class="list-title">{{title}}</text>
+  </view>
+
+  <view wx:if="{{viewType === 'card'}}" class="source-list">
+    <view 
+      wx:for="{{items}}" 
+      wx:key="id"
+      class="source-card"
+    >
+      <view class="source-header">
+        <view class="title-wrapper">
+          <text class="source-name">{{item.name}}</text>
+          <button wx:if="{{item.url}}" class="link-btn" bindtap="openLink" data-url="{{item.url}}">官网</button>
+        </view>
+        <text class="detail-btn" bindtap="goToDetail" data-source="{{item}}">查看详情 ›</text>
+      </view>
+      <text class="source-desc">{{item.description}}</text>
+      <view class="source-tags">
+        <text 
+          wx:for="{{item.tags}}" 
+          wx:key="*this"
+          class="tag"
+        >{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:elif="{{viewType === 'wechat'}}" class="wechat-list">
+    <view 
+      wx:for="{{items}}" 
+      wx:key="id"
+      class="wechat-item"
+      bindtap="goToDetail"
+      data-source="{{item}}"
+    >
+      <text class="wechat-name">{{item.name}}</text>
+      <text class="wechat-desc">{{item.description}}</text>
+    </view>
+  </view>
+
+  <view wx:else class="research-list">
+    <view 
+      wx:for="{{items}}" 
+      wx:key="id"
+      class="research-item"
+      bindtap="goToDetail"
+      data-source="{{item}}"
+    >
+      <text class="research-name">{{item.name}}</text>
+      <text class="research-desc">{{item.description}}</text>
+    </view>
+  </view>
+</view>

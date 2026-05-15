@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "交易数据",
+  "usingComponents": {
+    "kline": "/components/kline/kline"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/data/data",
+    "pages/strategy/strategy",
+    "pages/tools/tools",
+    "pages/common/list",
+    "pages/detail/detail",
+    "pages/webview/webview"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1E88E5",
+    "navigationBarTitleText": "璇天凤舞的数据助手",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1E88E5",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "交易数据",
+        "iconPath": "images/data.png",
+        "selectedIconPath": "images/data-active.png"
+      },
+      {
+        "pagePath": "pages/strategy/strategy",
+        "text": "交易策略",
+        "iconPath": "images/strategy.png",
+        "selectedIconPath": "images/strategy-active.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "交易工具",
+        "iconPath": "images/tool.png",
+        "selectedIconPath": "images/tool-active.png"
+      }
+    ],
+    "position": "bottom"
+  }
+}

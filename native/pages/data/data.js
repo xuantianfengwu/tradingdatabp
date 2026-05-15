@@ -1,0 +1,205 @@
+Page({
+  data: {
+    currentIndex: 0,
+    categories: [
+      {
+        id: 'stock',
+        name: '股票',
+        icon: '📈',
+        description: '包含A股、港股、美股及历史数据下载',
+        sources: [
+          {
+            id: 'tushare',
+            name: 'Tushare',
+            description: '免费专业金融数据接口，提供A股、港股、美股等多市场数据，支持日K线、财务指标、资金流向等。',
+            tags: ['免费', 'Python', '多市场', 'API'],
+            url: 'https://tushare.pro/'
+          },
+          {
+            id: 'akshare',
+            name: 'AKShare',
+            description: '全品种Python数据源，支持股票、期货、基金等多种标的的数据获取，文档完善。',
+            tags: ['免费', 'Python', '全品种', '开源'],
+            url: 'https://www.akshare.xyz/'
+          },
+          {
+            id: 'eastmoney_data',
+            name: '东方财富数据中心',
+            description: '提供全面的股票市场数据，包括实时行情、历史数据、财务数据、资金流向等。',
+            tags: ['A股', '实时行情', '财务数据', '资讯'],
+            url: 'https://data.eastmoney.com/'
+          }
+        ]
+      },
+      {
+        id: 'futures',
+        name: '期货',
+        icon: '📊',
+        description: '包含商品期货、股指期货、国债期货等数据',
+        sources: [
+          {
+            id: 'hexun_futures',
+            name: '和讯期货',
+            description: '提供期货市场的实时行情、持仓数据、基差分析、新闻资讯等内容。',
+            tags: ['实时行情', '持仓数据', '基差分析', '资讯'],
+            url: 'http://futures.hexun.com/'
+          },
+          {
+            id: 'dce',
+            name: '大商所数据',
+            description: '大连商品交易所官方数据，包含仓单数据、成交数据、持仓数据等。',
+            tags: ['官方数据', '仓单', '持仓', '期货'],
+            url: 'http://www.dce.com.cn/'
+          },
+          {
+            id: 'czce',
+            name: '郑商所数据',
+            description: '郑州商品交易所官方数据，提供期货合约、持仓、成交等数据。',
+            tags: ['官方数据', '农产品', '能源', '期货'],
+            url: 'http://www.czce.com.cn/'
+          }
+        ]
+      },
+      {
+        id: 'forex',
+        name: '外汇',
+        icon: '💱',
+        description: '包含外汇汇率、货币对行情等数据',
+        sources: [
+          {
+            id: 'investing_com',
+            name: 'Investing.com',
+            description: '全球领先的金融数据平台，提供实时外汇汇率、经济数据、财经新闻等。',
+            tags: ['外汇', '实时行情', '全球市场', '财经新闻'],
+            url: 'https://www.investing.com/'
+          },
+          {
+            id: 'oanda',
+            name: 'OANDA',
+            description: '专业的外汇数据和交易平台，提供实时汇率、历史数据和技术分析工具。',
+            tags: ['外汇', '数据', '交易', 'API'],
+            url: 'https://www.oanda.com/'
+          },
+          {
+            id: 'xe',
+            name: 'XE.com',
+            description: '全球知名的外汇汇率查询网站，提供180+货币的实时汇率和历史数据。',
+            tags: ['外汇', '汇率', '换算', '免费'],
+            url: 'https://www.xe.com/'
+          }
+        ]
+      },
+      {
+        id: 'crypto',
+        name: '数字货币',
+        icon: '🪙',
+        description: '包含加密货币行情、交易数据等',
+        sources: [
+          {
+            id: 'ccxt',
+            name: 'CCXT',
+            description: '统一的加密货币交易所API，支持100+交易所，支持Python和JavaScript。',
+            tags: ['加密货币', '多交易所', 'API', '开源'],
+            url: 'https://github.com/ccxt/ccxt'
+          },
+          {
+            id: 'coingecko',
+            name: 'CoinGecko',
+            description: '提供加密货币价格、市值、交易量等数据，支持API访问。',
+            tags: ['加密货币', '价格数据', 'API', '免费'],
+            url: 'https://www.coingecko.com/'
+          },
+          {
+            id: 'coinmarketcap',
+            name: 'CoinMarketCap',
+            description: '全球最大的加密货币市场数据平台，提供价格、市值、交易量等信息。',
+            tags: ['加密货币', '市场数据', '排名', '资讯'],
+            url: 'https://coinmarketcap.com/'
+          }
+        ]
+      },
+      {
+        id: 'macro',
+        name: '宏观经济',
+        icon: '🌐',
+        description: '包含宏观经济指标、行业数据等',
+        sources: [
+          {
+            id: 'stats_gov',
+            name: '国家统计局',
+            description: '提供中国宏观经济数据，包括GDP、CPI、PPI、人口数据等重要指标。',
+            tags: ['官方数据', 'GDP', 'CPI', '宏观'],
+            url: 'https://data.stats.gov.cn/'
+          },
+          {
+            id: 'pbc',
+            name: '中国人民银行',
+            description: '提供货币政策、金融统计、汇率等数据，是研究中国金融市场的重要来源。',
+            tags: ['货币政策', '金融数据', '汇率', '官方'],
+            url: 'http://www.pbc.gov.cn/'
+          },
+          {
+            id: 'fred',
+            name: 'FRED',
+            description: '美联储经济数据平台，提供全球宏观经济数据，包括利率、就业、货币供应等。',
+            tags: ['全球数据', '美联储', '利率', '免费'],
+            url: 'https://fred.stlouisfed.org/'
+          }
+        ]
+      }
+    ]
+  },
+
+  onLoad: function() {
+    console.log('交易数据页面加载');
+  },
+
+  switchTab: function(e) {
+    const index = parseInt(e.currentTarget.dataset.index);
+    this.setData({
+      currentIndex: index
+    });
+  },
+
+  onSwiperChange: function(e) {
+    const index = e.detail.current;
+    this.setData({
+      currentIndex: index
+    });
+  },
+
+  goToDetail: function(e) {
+    const source = e.currentTarget.dataset.source;
+    wx.navigateTo({
+      url: `/pages/detail/detail?module=trading_data&id=${source.id}`
+    });
+  },
+
+  openLink: function(e) {
+    const url = e.currentTarget.dataset.url;
+    wx.setClipboardData({
+      data: url,
+      success: function() {
+        wx.showToast({
+          title: '链接已复制',
+          icon: 'success'
+        });
+      }
+    });
+  },
+
+  viewAll: function(e) {
+    const categoryId = e.currentTarget.dataset.category;
+    wx.navigateTo({
+      url: `/pages/common/list?module=trading_data&category=${categoryId}&subtype=items`
+    });
+  },
+
+  onShareAppMessage: function() {
+    return {
+      title: '璇天凤舞的数据助手 - 交易数据获取渠道',
+      path: '/pages/data/data',
+      imageUrl: ''
+    };
+  }
+});

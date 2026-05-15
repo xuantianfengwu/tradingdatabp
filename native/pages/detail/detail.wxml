@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="detail-header">
+    <text class="detail-title">{{detail.name}}</text>
+    <button wx:if="{{detail.url}}" class="link-btn" bindtap="openLink">访问官网</button>
+  </view>
+  
+  <view class="detail-tags">
+    <text wx:for="{{detail.tags}}" wx:key="*this" class="tag">{{item}}</text>
+  </view>
+
+  <view class="detail-content">
+    <rich-text nodes="{{detail.content}}"></rich-text>
+  </view>
+
+  <view wx:if="{{detail.relatedArticles && detail.relatedArticles.length > 0}}" class="related-articles">
+    <h3>参考文章</h3>
+    <view wx:for="{{detail.relatedArticles}}" wx:key="id" class="article-item" bindtap="openArticle" data-article-id="{{item.id}}">
+      <text class="article-title">{{item.title}}</text>
+      <text class="article-arrow">→</text>
+    </view>
+  </view>
+
+  <view class="update-info">
+    <text class="update-text">更新时间：{{detail.updateTime}}</text>
+  </view>
+</view>

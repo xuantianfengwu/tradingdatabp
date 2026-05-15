@@ -1,0 +1,124 @@
+<view class="container">
+  <view class="header-section">
+    <text class="header-title">交易工具</text>
+    <text class="header-subtitle">量化工具与学习资源</text>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x>
+    <view class="category-tabs">
+      <view 
+        wx:for="{{categories}}" 
+        wx:key="id"
+        class="category-item {{currentIndex === index ? 'active' : ''}}"
+        bindtap="switchTab"
+        data-index="{{index}}"
+      >
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <swiper 
+    class="content-swiper"
+    current="{{currentIndex}}"
+    bindchange="onSwiperChange"
+    duration="300"
+  >
+    <swiper-item wx:for="{{categories}}" wx:key="id">
+      <scroll-view class="tab-content" scroll-y>
+        <view class="section-block">
+          <view class="block-title">
+            <text class="block-icon">📰</text>
+            <text class="block-text">资讯类</text>
+            <text class="view-all-btn" bindtap="viewAll" data-category="{{item.id}}" data-subtype="news">查看全部 ›</text>
+          </view>
+          <view class="source-list">
+            <view 
+              wx:for="{{item.news}}" 
+              wx:key="id"
+              class="source-card"
+            >
+              <view class="source-header">
+                <view class="title-wrapper">
+                  <text class="source-name">{{item.name}}</text>
+                  <button class="link-btn" bindtap="openLink" data-url="{{item.url}}">官网</button>
+                </view>
+                <text class="detail-btn" bindtap="goToDetail" data-source="{{item}}">查看详情 ›</text>
+              </view>
+              <text class="source-desc">{{item.description}}</text>
+              <view class="source-tags">
+                <text 
+                  wx:for="{{item.tags}}" 
+                  wx:key="*this"
+                  class="tag"
+                >{{item}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="section-block">
+          <view class="block-title">
+            <text class="block-icon">🔄</text>
+            <text class="block-text">回测类</text>
+            <text class="view-all-btn" bindtap="viewAll" data-category="{{item.id}}" data-subtype="backtest">查看全部 ›</text>
+          </view>
+          <view class="source-list">
+            <view 
+              wx:for="{{item.backtest}}" 
+              wx:key="id"
+              class="source-card"
+            >
+              <view class="source-header">
+                <view class="title-wrapper">
+                  <text class="source-name">{{item.name}}</text>
+                  <button class="link-btn" bindtap="openLink" data-url="{{item.url}}">官网</button>
+                </view>
+                <text class="detail-btn" bindtap="goToDetail" data-source="{{item}}">查看详情 ›</text>
+              </view>
+              <text class="source-desc">{{item.description}}</text>
+              <view class="source-tags">
+                <text 
+                  wx:for="{{item.tags}}" 
+                  wx:key="*this"
+                  class="tag"
+                >{{item}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="section-block">
+          <view class="block-title">
+            <text class="block-icon">💹</text>
+            <text class="block-text">交易类</text>
+            <text class="view-all-btn" bindtap="viewAll" data-category="{{item.id}}" data-subtype="trading">查看全部 ›</text>
+          </view>
+          <view class="source-list">
+            <view 
+              wx:for="{{item.trading}}" 
+              wx:key="id"
+              class="source-card"
+            >
+              <view class="source-header">
+                <view class="title-wrapper">
+                  <text class="source-name">{{item.name}}</text>
+                  <button class="link-btn" bindtap="openLink" data-url="{{item.url}}">官网</button>
+                </view>
+                <text class="detail-btn" bindtap="goToDetail" data-source="{{item}}">查看详情 ›</text>
+              </view>
+              <text class="source-desc">{{item.description}}</text>
+              <view class="source-tags">
+                <text 
+                  wx:for="{{item.tags}}" 
+                  wx:key="*this"
+                  class="tag"
+                >{{item}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,40 @@
+{
+    "miniprogramRoot": "native/",
+    "projectname": "璇天凤舞的数据助手",
+    "description": "璇天凤舞的数据助手 - 量化策略展示工具",
+    "appid": "wx3a605a2fc8e7036f",
+    "setting": {
+        "urlCheck": true,
+        "es6": false,
+        "enhance": false,
+        "compileHotReLoad": false,
+        "postcss": false,
+        "preloadBackgroundData": false,
+        "minified": false,
+        "newFeature": true,
+        "autoAudits": false,
+        "coverView": true,
+        "showShadowRootInWxmlPanel": false,
+        "scopeDataCheck": false,
+        "useCompilerModule": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        }
+    },
+    "compileType": "miniprogram",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {},
+    "libVersion": "2.27.3",
+    "srcMiniprogramRoot": "native/",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    }
+}

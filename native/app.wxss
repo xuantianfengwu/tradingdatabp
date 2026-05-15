@@ -1,0 +1,10 @@
+page {
+  background-color: #f5f7fa;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}

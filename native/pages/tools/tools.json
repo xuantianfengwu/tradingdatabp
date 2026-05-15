@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "行情工具",
+  "usingComponents": {
+    "kline": "/components/kline/kline"
+  }
+}

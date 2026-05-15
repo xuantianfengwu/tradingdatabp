@@ -1,0 +1,1 @@
+<canvas class="kline-canvas" canvas-id="kline" bindtouchstart="onTouchStart"></canvas>
