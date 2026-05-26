@@ -112,7 +112,7 @@ Page({
 
   onShareAppMessage: function() {
     return {
-      title: `璇天凤舞的数据助手 - ${this.data.title}`,
+      title: `璇天凤舞的Data助手 - ${this.data.title}`,
       path: `/pages/common/list?module=${this.options.module}&category=${this.options.category}&subtype=${this.options.subtype}`
     };
   }

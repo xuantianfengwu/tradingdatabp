@@ -1,5 +1,5 @@
 App({
   onLaunch() {
-    console.log('璇天凤舞的数据助手启动');
+    console.log('璇天凤舞的Data助手启动');
   }
 })

@@ -197,7 +197,7 @@ Page({
 
   onShareAppMessage: function() {
     return {
-      title: '璇天凤舞的数据助手 - 交易数据获取渠道',
+      title: '璇天凤舞的Data助手 - 交易数据获取渠道',
       path: '/pages/data/data',
       imageUrl: ''
     };

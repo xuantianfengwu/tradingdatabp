@@ -25,7 +25,7 @@ Page({
   },
   onShareAppMessage: function() {
     return {
-      title: '璇天凤舞的数据助手 - 专业投资工具',
+      title: '璇天凤舞的Data助手 - 专业投资工具',
       path: '/pages/index/index',
       imageUrl: ''
     };
