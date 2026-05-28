@@ -1,7 +1,7 @@
 {
     "miniprogramRoot": "native/",
-    "projectname": "璇天凤舞的数据助手",
-    "description": "璇天凤舞的数据助手 - 量化策略展示工具",
+    "projectname": "璇天凤舞的Data助手",
+    "description": "璇天凤舞的Data助手",
     "appid": "wx3a605a2fc8e7036f",
     "setting": {
         "urlCheck": true,
