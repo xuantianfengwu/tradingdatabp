@@ -25,8 +25,14 @@ Page({
       success: (res) => {
         wx.hideLoading();
         if (res.data) {
+          // 处理 content：如果是数组就拼接成字符串，如果是字符串就直接用
+          let processedData = { ...res.data };
+          if (Array.isArray(processedData.content)) {
+            processedData.content = processedData.content.join('\n');
+          }
+          
           this.setData({
-            detail: res.data,
+            detail: processedData,
             loading: false
           });
         } else {
