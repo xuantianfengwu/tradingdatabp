@@ -5,7 +5,7 @@
     "description": "包含A股、港股、美股等数据",
     "items": [
       {"id": "tushare", "name": "Tushare", "description": "免费专业金融数据接口，提供A股、港股、美股等多市场数据，支持日K线、财务指标、资金流向等。", "tags": ["免费", "Python", "多市场", "API"], "url": "https://tushare.pro/", "is_homepage": 1},
-      {"id": "akshare", "name": "AKShare", "description": "全品种Python数据源，支持股票、期货、基金等多种标的的数据获取，文档完善。", "tags": ["免费", "Python", "全品种", "开源"], "url": "https://www.akshare.xyz/", "is_homepage": 1},
+      {"id": "akshare", "name": "AKShare", "description": "全品种Python数据源，支持股票、期货、基金等多种标的的数据获取，文档完善。", "tags": ["免费", "Python", "全品种", "开源"], "url": "https://akshare.akfamily.xyz/", "is_homepage": 1},
       {"id": "eastmoney_data", "name": "东方财富数据中心", "description": "提供全面的股票市场数据，包括实时行情、历史数据、财务数据、资金流向等。", "tags": ["A股", "实时行情", "财务数据", "资讯"], "url": "https://data.eastmoney.com/", "is_homepage": 1},
       {"id": "yahoo_finance", "name": "Yahoo Finance", "description": "提供全球市场数据，支持CSV格式历史数据下载，包含股票、期货、外汇等。", "tags": ["全球市场", "历史数据", "CSV下载", "美股"], "url": "https://finance.yahoo.com/", "is_homepage": 0}
     ]
@@ -16,6 +16,7 @@
     "description": "包含商品期货、股指期货、国债期货等数据",
     "items": [
       {"id": "hexun_futures", "name": "和讯期货", "description": "提供期货市场的实时行情、持仓数据、基差分析、新闻资讯等内容。", "tags": ["实时行情", "持仓数据", "基差分析", "资讯"], "url": "http://futures.hexun.com/", "is_homepage": 1},
+      {"id": "cftc", "name": "CFTC", "description": "美国商品期货交易委员会，提供期货市场持仓数据、交易者持仓报告等重要宏观数据。", "tags": ["期货持仓", "CFTC", "非商业持仓", "交易报告"], "url": "https://www.cftc.gov/", "is_homepage": 0},
       {"id": "dce", "name": "大连商品交易所", "description": "大连商品交易所官方数据，包含仓单数据、成交数据、持仓数据等。", "tags": ["官方数据", "仓单", "持仓", "期货"], "url": "http://www.dce.com.cn/", "is_homepage": 1},
       {"id": "czce", "name": "郑州商品交易所", "description": "郑州商品交易所官方数据，提供期货合约、持仓、成交等数据。", "tags": ["官方数据", "农产品", "能源", "期货"], "url": "http://www.czce.com.cn/", "is_homepage": 1},
       {"id": "ine", "name": "上海国际能源交易中心", "description": "上海国际能源交易中心官方数据，提供原油期货、燃料油等能源品种数据。", "tags": ["官方数据", "原油", "能源", "期货"], "url": "http://www.ine.cn/", "is_homepage": 0}
@@ -29,8 +30,8 @@
       {"id": "investing_com", "name": "Investing.com", "description": "全球领先的金融数据平台，提供实时外汇汇率、经济数据、财经新闻等。", "tags": ["外汇", "实时行情", "全球市场", "财经新闻"], "url": "https://www.investing.com/", "is_homepage": 1},
       {"id": "fcsapi", "name": "FCS API", "description": "专业的外汇API服务，提供实时汇率、历史数据、技术指标，支持4000+货币对。", "tags": ["外汇", "API", "技术指标", "免费额度"], "url": "https://fcsapi.com/", "is_homepage": 1},
       {"id": "exchange_api", "name": "ExchangeRate-API", "description": "提供全球160+货币的实时汇率和历史数据API服务，支持1990年至今的历史数据查询。", "tags": ["外汇", "API", "历史数据", "货币转换"], "url": "https://www.exchangerate-api.com/", "is_homepage": 1},
-      {"id": "oanda", "name": "OANDA", "description": "专业的外汇数据和交易平台，提供实时汇率、历史数据和技术分析工具。", "tags": ["外汇", "数据", "交易", "API"], "url": "https://www.oanda.com/", "is_homepage": 0},
-      {"id": "xe", "name": "XE.com", "description": "全球知名的外汇汇率查询网站，提供180+货币的实时汇率和历史数据。", "tags": ["外汇", "汇率", "换算", "免费"], "url": "https://www.xe.com/", "is_homepage": 0}      
+      {"id": "oanda", "name": "OANDA", "description": "专业的外汇数据和交易平台，提供实时汇率、历史数据和技术分析工具。", "tags": ["外汇", "数据", "交易", "API"], "url": "https://www.oanda.com/currency-converter/en/historical-currency-converter/", "is_homepage": 0, "is_hidden": 1},
+      {"id": "xe", "name": "XE.com", "description": "全球知名的外汇汇率查询网站，提供180+货币的实时汇率和历史数据。", "tags": ["外汇", "汇率", "换算", "免费"], "url": "https://www.xe.com/platform/xecurrencydata/", "is_homepage": 0, "is_hidden": 1}      
     ]
   },
   "crypto": {
@@ -39,8 +40,8 @@
     "description": "包含加密货币行情、交易数据等",
     "items": [
       {"id": "ccxt", "name": "CCXT", "description": "统一的加密货币交易所API，支持100+交易所，支持Python和JavaScript。", "tags": ["加密货币", "多交易所", "API", "开源"], "url": "https://github.com/ccxt/ccxt", "is_homepage": 1},
-      {"id": "coinmarketcap", "name": "CoinMarketCap", "description": "全球最大的加密货币市场数据平台，提供价格、市值、交易量等信息。", "tags": ["加密货币", "市场数据", "排名", "资讯"], "url": "https://coinmarketcap.com/", "is_homepage": 1},
       {"id": "fcsapi", "name": "FCS API", "description": "专业的金融数据API，支持加密货币实时行情、历史数据和技术指标分析。", "tags": ["加密货币", "API", "技术指标", "实时行情"], "url": "https://fcsapi.com/", "is_homepage": 1},
+      {"id": "coinmarketcap", "name": "CoinMarketCap", "description": "全球最大的加密货币市场数据平台，提供价格、市值、交易量等信息。", "tags": ["加密货币", "市场数据", "排名", "资讯"], "url": "https://coinmarketcap.com/", "is_homepage": 1},
       {"id": "coingecko", "name": "CoinGecko", "description": "提供加密货币价格、市值、交易量等数据，支持API访问。", "tags": ["加密货币", "价格数据", "API", "免费"], "url": "https://www.coingecko.com/", "is_homepage": 0}      
     ]
   },
@@ -53,7 +54,7 @@
       {"id": "pbc", "name": "中国人民银行", "description": "提供货币政策、金融统计、汇率等数据，是研究中国金融市场的重要来源。", "tags": ["货币政策", "金融数据", "汇率", "官方"], "url": "http://www.pbc.gov.cn/", "is_homepage": 1},
       {"id": "fred", "name": "FRED", "description": "美联储经济数据平台，提供全球宏观经济数据，包括利率、就业、货币供应等。", "tags": ["全球数据", "美联储", "利率", "免费"], "url": "https://fred.stlouisfed.org/", "is_homepage": 1},
       {"id": "ecb", "name": "欧洲央行", "description": "欧洲中央银行官方网站，提供欧元汇率、货币政策等权威数据。", "tags": ["官方数据", "央行", "欧元", "政策"], "url": "https://www.ecb.europa.eu/", "is_homepage": 0},
-      {"id": "wind", "name": "Wind资讯", "description": "专业金融数据和资讯平台，提供全面的财经数据服务。", "tags": ["专业", "机构", "数据", "资讯"], "url": "https://www.wind.com.cn/", "is_homepage": 0}
+      {"id": "wind", "name": "Wind资讯", "description": "专业金融数据和资讯平台，提供全面的财经数据服务。", "tags": ["专业", "机构", "数据", "资讯"], "url": "https://www.wind.com.cn/", "is_homepage": 0}      
     ]
   }
 }

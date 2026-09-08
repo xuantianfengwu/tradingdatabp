@@ -64,10 +64,14 @@ Page({
             title = categoryName || moduleName;
           }
           
+          // 过滤掉 is_hidden 为 1 的项目
+          const allItems = res.data[category][subtype] || [];
+          const visibleItems = allItems.filter(item => item.is_hidden !== 1);
+          
           this.setData({
             title: title,
             viewType: viewTypeMap[subtype] || 'card',
-            items: res.data[category][subtype],
+            items: visibleItems,
             loading: false,
             module: module
           });

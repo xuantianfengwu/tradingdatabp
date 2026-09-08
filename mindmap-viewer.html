@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>璇天凤舞的数据助手 - 思维导图编辑器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .toolbar h1 {
+            font-size: 1.2em;
+            color: #667eea;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .canvas-container {
+            margin-top: 70px;
+            width: 100%;
+            height: calc(100vh - 70px);
+            overflow: auto;
+            background: #f8f9fa;
+            background-image: 
+                linear-gradient(rgba(102, 126, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(102, 126, 234, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .tree {
+            padding: 40px;
+            min-width: max-content;
+        }
+
+        .node {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            margin: 5px 0;
+        }
+
+        .node-content {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+            user-select: none;
+            border: 2px solid transparent;
+            max-width: 280px;
+            word-wrap: break-word;
+            z-index: 1;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .node-content:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .node-content.selected {
+            border-color: #667eea;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        }
+
+        .node-content.root {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .toggle-btn {
+            width: 20px;
+            height: 20px;
+            border: none;
+            background: #e9ecef;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .toggle-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .toggle-btn.collapsed::before {
+            content: '+';
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .toggle-btn.expanded::before {
+            content: '−';
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .node-text {
+            flex: 1;
+            min-width: 0;
+            font-size: 0.95em;
+        }
+
+        .node-input {
+            padding: 8px 12px;
+            border: 2px solid #667eea;
+            border-radius: 4px;
+            font-size: 1em;
+            outline: none;
+            width: 100%;
+            min-width: 100px;
+        }
+
+        .children {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-left: 40px;
+            padding: 10px 0;
+        }
+
+        .children.collapsed {
+            display: none;
+        }
+
+        .children::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 30px;
+            bottom: 30px;
+            width: 1px;
+            background: #d1d5db;
+        }
+
+        .children > .node::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 25px;
+            width: 20px;
+            height: 1px;
+            background: #d1d5db;
+        }
+
+        .add-child-btn {
+            margin-left: 10px;
+            padding: 6px 12px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            color: #666;
+            transition: all 0.3s;
+            display: none;
+        }
+
+        .node-content:hover .add-child-btn {
+            display: inline-block;
+        }
+
+        .add-child-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .delete-btn {
+            margin-left: 8px;
+            padding: 6px 10px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s;
+            display: none;
+        }
+
+        .node-content:hover .delete-btn {
+            display: inline-block;
+        }
+
+        .delete-btn:hover {
+            background: #ee5253;
+        }
+
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .instructions h4 {
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+
+        .instructions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+        }
+
+        .instructions code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <h1>🧠 璇天凤舞的数据助手 - 思维导图</h1>
+        <button class="btn btn-primary" onclick="addRootNode()">➕ 添加根节点</button>
+        <button class="btn btn-secondary" onclick="exportMarkdown()">📄 导出 Markdown</button>
+        <button class="btn btn-secondary" onclick="importMarkdown()">📥 导入 Markdown</button>
+        <button class="btn btn-secondary" onclick="saveData()">💾 保存数据</button>
+    </div>
+
+    <div class="canvas-container">
+        <div class="tree" id="tree-container"></div>
+    </div>
+
+    <div class="instructions">
+        <h4>📋 操作说明</h4>
+        <ul>
+            <li><code>双击</code> 编辑节点内容</li>
+            <li><code>点击 +</code> 展开/收起子节点</li>
+            <li><code>悬停</code> 显示添加子节点/删除按钮</li>
+            <li><code>Enter</code> 确认编辑</li>
+            <li><code>Esc</code> 取消编辑</li>
+        </ul>
+    </div>
+
+    <script>
+        // 思维导图数据结构
+        let mindmapData = null;
+
+        // 选中的节点
+        let selectedNode = null;
+
+        // 生成唯一ID
+        function generateId() {
+            return 'node_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // 初始化示例数据（只保留根节点）
+        function initSampleData() {
+            return {
+                id: generateId(),
+                text: '请导入或新建思维导图',
+                children: []
+            };
+        }
+
+        // 计算节点深度
+        function getNodeDepth(root, nodeId, depth = 0) {
+            if (root.id === nodeId) return depth;
+            if (root.children) {
+                for (let child of root.children) {
+                    const found = getNodeDepth(child, nodeId, depth + 1);
+                    if (found !== -1) return found;
+                }
+            }
+            return -1;
+        }
+
+        // 渲染单个节点
+        function renderNode(node, isRoot = false) {
+            const nodeEl = document.createElement('div');
+            nodeEl.className = 'node';
+            nodeEl.dataset.id = node.id;
+
+            const contentEl = document.createElement('div');
+            contentEl.className = 'node-content' + (isRoot ? ' root' : '');
+            contentEl.dataset.id = node.id;
+
+            // 计算节点深度，决定默认是否展开
+            const nodeDepth = getNodeDepth(mindmapData, node.id);
+            const isExpanded = nodeDepth <= 2; // 只展开到第二层
+
+            // 展开/收起按钮（如果有子节点）
+            if (node.children && node.children.length > 0) {
+                const toggleBtn = document.createElement('button');
+                toggleBtn.className = 'toggle-btn ' + (isExpanded ? 'expanded' : 'collapsed');
+                toggleBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    toggleNode(node.id);
+                };
+                contentEl.appendChild(toggleBtn);
+            } else {
+                // 占位符，保持对齐
+                const spacer = document.createElement('span');
+                spacer.style.width = '30px';
+                spacer.style.display = 'inline-block';
+                contentEl.appendChild(spacer);
+            }
+
+            // 节点文本
+            const textEl = document.createElement('span');
+            textEl.className = 'node-text';
+            textEl.textContent = node.text;
+            contentEl.appendChild(textEl);
+
+            // 添加子节点按钮
+            const addChildBtn = document.createElement('button');
+            addChildBtn.className = 'add-child-btn';
+            addChildBtn.textContent = '➕ 子节点';
+            addChildBtn.onclick = (e) => {
+                e.stopPropagation();
+                addChild(node.id);
+            };
+            contentEl.appendChild(addChildBtn);
+
+            // 删除按钮（根节点不删除）
+            if (!isRoot) {
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-btn';
+                deleteBtn.textContent = '🗑️';
+                deleteBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    deleteNode(node.id);
+                };
+                contentEl.appendChild(deleteBtn);
+            }
+
+            // 点击选中节点
+            contentEl.onclick = (e) => {
+                e.stopPropagation();
+                selectNode(node.id);
+            };
+
+            // 双击编辑
+            contentEl.ondblclick = (e) => {
+                e.stopPropagation();
+                startEdit(node.id);
+            };
+
+            nodeEl.appendChild(contentEl);
+
+            // 渲染子节点
+            if (node.children && node.children.length > 0) {
+                const childrenEl = document.createElement('div');
+                childrenEl.className = 'children' + (isExpanded ? '' : ' collapsed');
+                childrenEl.dataset.parentId = node.id;
+                node.children.forEach(child => {
+                    childrenEl.appendChild(renderNode(child, false));
+                });
+                nodeEl.appendChild(childrenEl);
+            }
+
+            return nodeEl;
+        }
+
+        // 渲染整个树
+        function renderTree() {
+            const container = document.getElementById('tree-container');
+            container.innerHTML = '';
+            if (mindmapData) {
+                container.appendChild(renderNode(mindmapData, true));
+            }
+        }
+
+        // 查找节点
+        function findNode(node, id) {
+            if (node.id === id) return node;
+            if (node.children) {
+                for (let child of node.children) {
+                    const found = findNode(child, id);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+
+        // 查找节点的父节点
+        function findParent(root, id, parent = null) {
+            if (root.id === id) return parent;
+            if (root.children) {
+                for (let child of root.children) {
+                    const found = findParent(child, id, root);
+                    if (found !== undefined) return found;
+                }
+            }
+            return undefined;
+        }
+
+        // 选中节点
+        function selectNode(id) {
+            // 清除之前的选中状态
+            document.querySelectorAll('.node-content.selected').forEach(el => {
+                el.classList.remove('selected');
+            });
+
+            // 选中新节点
+            const nodeEl = document.querySelector(`.node-content[data-id="${id}"]`);
+            if (nodeEl) {
+                nodeEl.classList.add('selected');
+                selectedNode = id;
+            }
+        }
+
+        // 切换展开/收起
+        function toggleNode(id) {
+            const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+            const toggleBtn = nodeEl.querySelector('.toggle-btn');
+            const childrenEl = nodeEl.querySelector('.children');
+
+            if (toggleBtn.classList.contains('expanded')) {
+                toggleBtn.classList.remove('expanded');
+                toggleBtn.classList.add('collapsed');
+                childrenEl.classList.add('collapsed');
+            } else {
+                toggleBtn.classList.remove('collapsed');
+                toggleBtn.classList.add('expanded');
+                childrenEl.classList.remove('collapsed');
+            }
+        }
+
+        // 开始编辑
+        function startEdit(id) {
+            const node = findNode(mindmapData, id);
+            if (!node) return;
+
+            const contentEl = document.querySelector(`.node-content[data-id="${id}"]`);
+            const textEl = contentEl.querySelector('.node-text');
+            const currentText = node.text;
+
+            const inputEl = document.createElement('input');
+            inputEl.className = 'node-input';
+            inputEl.value = currentText;
+            inputEl.style.width = Math.max(currentText.length * 15, 150) + 'px';
+
+            // 替换文本为输入框
+            textEl.style.display = 'none';
+            contentEl.insertBefore(inputEl, textEl);
+            inputEl.focus();
+            inputEl.select();
+
+            // 完成编辑
+            const finishEdit = (save = true) => {
+                if (save && inputEl.value.trim()) {
+                    node.text = inputEl.value.trim();
+                }
+                inputEl.remove();
+                textEl.style.display = '';
+                textEl.textContent = node.text;
+            };
+
+            inputEl.onkeydown = (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    finishEdit(true);
+                } else if (e.key === 'Escape') {
+                    finishEdit(false);
+                }
+            };
+
+            inputEl.onblur = () => {
+                finishEdit(true);
+            };
+        }
+
+        // 添加子节点
+        function addChild(parentId) {
+            const parent = findNode(mindmapData, parentId);
+            if (!parent) return;
+
+            const newNode = {
+                id: generateId(),
+                text: '新节点',
+                children: []
+            };
+
+            if (!parent.children) {
+                parent.children = [];
+            }
+            parent.children.push(newNode);
+
+            renderTree();
+
+            // 展开父节点
+            const parentNodeEl = document.querySelector(`.node[data-id="${parentId}"]`);
+            const childrenEl = parentNodeEl.querySelector('.children');
+            const toggleBtn = parentNodeEl.querySelector('.toggle-btn');
+            if (childrenEl && toggleBtn) {
+                childrenEl.classList.remove('collapsed');
+                toggleBtn.classList.remove('collapsed');
+                toggleBtn.classList.add('expanded');
+            }
+
+            // 自动开始编辑新节点
+            setTimeout(() => startEdit(newNode.id), 100);
+        }
+
+        // 删除节点
+        function deleteNode(id) {
+            if (!confirm('确定要删除这个节点及其所有子节点吗？')) return;
+
+            const parent = findParent(mindmapData, id);
+            if (parent && parent.children) {
+                parent.children = parent.children.filter(child => child.id !== id);
+            }
+            renderTree();
+        }
+
+        // 添加根节点（如果没有根节点）
+        function addRootNode() {
+            if (!mindmapData) {
+                mindmapData = {
+                    id: generateId(),
+                    text: '新思维导图',
+                    children: []
+                };
+                renderTree();
+                setTimeout(() => startEdit(mindmapData.id), 100);
+            }
+        }
+
+        // 导出 Markdown
+        function exportMarkdown() {
+            function toMarkdown(node, level = 1) {
+                let result = '';
+                const prefix = '#'.repeat(Math.min(level, 6)) + ' ';
+                result += prefix + node.text + '\n\n';
+
+                if (node.children) {
+                    node.children.forEach(child => {
+                        result += toMarkdown(child, level + 1);
+                    });
+                }
+                return result;
+            }
+
+            const markdown = mindmapData ? toMarkdown(mindmapData) : '';
+            const blob = new Blob([markdown], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mindmap.md';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // 导入 Markdown（完整版本）
+        function importMarkdown() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.md,.txt';
+
+            input.onchange = (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const content = e.target.result;
+                        const lines = content.split('\n');
+
+                        // 解析行，记录类型、层级、文本内容
+                        function parseMarkdownLines(lines) {
+                            const parsedLines = [];
+                            for (let i = 0; i < lines.length; i++) {
+                                const line = lines[i];
+                                const trimmedLine = line.trim();
+                                
+                                if (!trimmedLine || trimmedLine === '***') {
+                                    continue; // 跳过空行和分隔线
+                                }
+
+                                // 检查标题
+                                const headerMatch = line.match(/^(#{1,6})\s+(.*)$/);
+                                if (headerMatch) {
+                                    parsedLines.push({
+                                        type: 'header',
+                                        level: headerMatch[1].length,
+                                        text: headerMatch[2],
+                                        indent: 0
+                                    });
+                                    continue;
+                                }
+
+                                // 检查列表项，计算缩进
+                                const listMatch = line.match(/^(\s*)([-*+])\s+(.*)$/);
+                                if (listMatch) {
+                                    const indent = listMatch[1].length;
+                                    parsedLines.push({
+                                        type: 'list',
+                                        level: indent / 2, // 2个空格为一级缩进
+                                        text: listMatch[3],
+                                        indent: indent
+                                    });
+                                    continue;
+                                }
+
+                                // 普通文本（跳过）
+                            }
+                            return parsedLines;
+                        }
+
+                        // 构建树形结构
+                        function buildTree(parsedLines) {
+                            const root = {
+                                id: generateId(),
+                                text: '思维导图',
+                                children: []
+                            };
+                            
+                            // 维护一个层级栈，用于快速找到父节点
+                            const stack = [{ node: root, level: 0 }];
+
+                            for (const line of parsedLines) {
+                                const newNode = {
+                                    id: generateId(),
+                                    text: line.text,
+                                    children: []
+                                };
+
+                                // 找到合适的父节点
+                                let effectiveLevel = line.type === 'header' ? line.level : (6 + line.level);
+                                
+                                // 弹出栈，直到找到合适的父层级
+                                while (stack.length > 1) {
+                                    const top = stack[stack.length - 1];
+                                    if (top.level < effectiveLevel) {
+                                        break;
+                                    }
+                                    stack.pop();
+                                }
+
+                                // 添加到父节点
+                                const parent = stack[stack.length - 1].node;
+                                parent.children.push(newNode);
+                                stack.push({ node: newNode, level: effectiveLevel });
+                            }
+
+                            // 简化根节点（如果根节点只有一个子节点，就用那个子节点作为根）
+                            if (root.children.length === 1) {
+                                return root.children[0];
+                            }
+                            return root;
+                        }
+
+                        const parsedLines = parseMarkdownLines(lines);
+                        const tree = buildTree(parsedLines);
+                        mindmapData = tree;
+                        renderTree();
+                    };
+                    reader.readAsText(file);
+                }
+            };
+
+            input.click();
+        }
+
+        // 保存数据到 localStorage
+        function saveData() {
+            localStorage.setItem('mindmapData', JSON.stringify(mindmapData));
+            alert('✅ 数据已保存到本地存储！');
+        }
+
+        // 从 localStorage 加载数据
+        function loadData() {
+            const saved = localStorage.getItem('mindmapData');
+            if (saved) {
+                try {
+                    mindmapData = JSON.parse(saved);
+                } catch (e) {
+                    mindmapData = initSampleData();
+                }
+            } else {
+                mindmapData = initSampleData();
+            }
+            renderTree();
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+        });
+
+        // 点击空白处取消选中
+        document.querySelector('.canvas-container').onclick = () => {
+            document.querySelectorAll('.node-content.selected').forEach(el => {
+                el.classList.remove('selected');
+            });
+            selectedNode = null;
+        };
+    </script>
+</body>
+</html>
